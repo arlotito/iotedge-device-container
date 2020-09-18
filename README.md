@@ -1,6 +1,6 @@
 # iotedge-device-container
 An IoT Edge instance in a container.
-It includes the IoT Edge runtime and a container engine itself.
+It includes the IoT Edge runtime and a container engine (moby).
 
 ![text](./doc/images/diagram.png)
 
