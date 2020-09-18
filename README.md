@@ -17,8 +17,8 @@ As described [here](https://docs.microsoft.com/en-us/azure/iot-edge/development-
 build-container.sh <docker-host> <image>
 ```
 where:
-* <docker-host> is the docker host you want to use to build the image (ex. 127.0.0.1 or any other)
-* <image> is the image tag (ex. repo/image:tag)
+* `<docker-host>` is the docker host you want to use to build the image (ex. 127.0.0.1 or any other)
+* `<image>` is the image tag (ex. repo/image:tag)
 
 example:
 ```
@@ -30,8 +30,8 @@ build-container.sh 192.168.2.96 arturol76/iotedgec
 build-container.sh <docker-host> <image>
 ```
 where:
-* <docker-host> is the docker host you want to run the container on (ex. 127.0.0.1 or any other)
-* <image> is the image tag (ex. repo/image:tag)
+* `<docker-host>` is the docker host you want to run the container on (ex. 127.0.0.1 or any other)
+* `<image>` is the image tag (ex. repo/image:tag)
 It will create and run a container with id = 'iotedgec'
 
 example:
@@ -45,7 +45,7 @@ run-container.sh 192.168.2.96 arturol76/iotedgec
 exec-bash.sh <docker-host>
 ```
 where:
-* <docker-host> is the docker host where the 'iotedgec' container is running (ex. 127.0.0.1 or any other)
+* `<docker-host>` is the docker host where the 'iotedgec' container is running (ex. 127.0.0.1 or any other)
 
 example:
 ```
