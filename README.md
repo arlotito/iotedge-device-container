@@ -2,6 +2,8 @@
 An IoT Edge instance in a container.
 It includes the IoT Edge runtime and a container engine itself.
 
+![text](./doc/images/diagram.png)
+
 This work is based on this [repo](https://github.com/toolboc/azure-iot-edge-device-container) with the following simplifications:
 * x86 only
 * manual provisioning only via connection string in a .env file 
