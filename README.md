@@ -7,7 +7,7 @@ It includes the IoT Edge runtime and a container engine (moby).
 This work is based on this [repo](https://github.com/toolboc/azure-iot-edge-device-container) with the following changes:
 * x86 only
 * no self-provisioning, manual provisioning only via connection string in a .env file
-* not tied to a specific version of iot edge runtime available, it will use the lastest one
+* not tied to a specific version of iot edge runtime, it will use the lastest
 
 As described [here](https://docs.microsoft.com/en-us/azure/iot-edge/development-environment#iot-edge-device-container):
 *"The IoT Edge device container is a complete IoT Edge device, ready to be launched on any machine with a container engine. The device container includes the IoT Edge runtime and a container engine itself. Each instance of the container is a fully functional self-provisioning IoT Edge device. The device container supports remote debugging of modules, as long as there is a network route to the module. The device container is good for quickly creating large numbers of IoT Edge devices to test at-scale scenarios or Azure Pipelines. It also supports deployment to kubernetes via helm."*
