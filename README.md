@@ -7,7 +7,7 @@ It includes the IoT Edge runtime and a container engine (moby).
 This work is based on this [repo](https://github.com/toolboc/azure-iot-edge-device-container) with the following changes:
 * x86 only
 * no self-provisioning, manual provisioning only via connection string in a .env file
-* not tied to a specific version of iot edge runtime, it will use the lastest
+* not tied to a specific version of iot edge runtime, it will use the latest
 
 For further info, have a look to Microsoft documentation [here](https://docs.microsoft.com/en-us/azure/iot-edge/development-environment#iot-edge-device-container).
 
@@ -40,15 +40,21 @@ run-container.sh 192.168.2.96 arturol76/iotedgec
 
 
 ## iotedge cli
+To access the iotedge CLI, open a bash: 
 ```
 exec-bash.sh <docker-host>
 ```
 where:
 * `<docker-host>` is the docker host where the 'iotedgec' container is running (ex. 127.0.0.1 or any other)
+and use the CLI as you would normally do.
 
 example:
 ```
 exec-bash.sh 192.168.2.96
+```
+and then for instance:
+```
+iotedge list
 ```
 
 ## .env file
