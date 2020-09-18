@@ -52,6 +52,6 @@ exec-bash.sh 192.168.2.96
 ## .env file
 Create an .env file with the iot hub connection string as follows:
 ```
-DEVICE_CONNECTION_STRING=HostName=xyz.azure-devices.net;DeviceId=iotedge-in-a-container;SharedAccessKey=xxxxxxxxyyyyyyyyyyyyyzzzzzzzzz
+DEVICE_CONNECTION_STRING=HostName=xyz.azure-devices.net;DeviceId=xxx;SharedAccessKey=xxxxxxxxyyyyyyyyyyyyyzzzzzzzzz
 ```
 Save the file in the same folder as the 'run-container.sh' file.
