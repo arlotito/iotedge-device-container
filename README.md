@@ -36,7 +36,7 @@ It will create and run a container with id = 'iotedgec'
 
 example:
 ```
-run-container.sh <docker-host> <image>
+run-container.sh 192.168.2.96 arturol76/iotedgec
 ```
 
 
