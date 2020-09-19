@@ -36,7 +36,7 @@ It will create and run a container with id = 'iotedgec'
 
 example:
 ```
-docker -H 192.168.2.96 run --privileged -e DEVICE_CONNECTION_STRING=Host.... --name iotedgec arturol76/iotedgec
+docker -H 192.168.2.96 run --privileged -e DEVICE_CONNECTION_STRING="Host...." --name iotedgec arturol76/iotedgec
 ```
 
 
