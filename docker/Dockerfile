@@ -14,20 +14,16 @@ RUN apt-get update -qq && apt-get install -qqy \
     iptables \
     iproute2 \
     systemd && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN AZ_REPO=$(lsb_release -cs) && \
+    rm -rf /var/lib/apt/lists/* && \
+    AZ_REPO=$(lsb_release -cs) && \
     echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | \
     tee /etc/apt/sources.list.d/azure-cli.list && \
-    curl -L https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-
-RUN curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list && \
+    curl -L https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
+    curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list && \
     cp ./microsoft-prod.list /etc/apt/sources.list.d/ && \
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && \
-    cp ./microsoft.gpg /etc/apt/trusted.gpg.d/ 
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    azure-cli \
+    cp ./microsoft.gpg /etc/apt/trusted.gpg.d/ && \
+    apt-get update && apt-get install -y --no-install-recommends \
     moby-cli \
     moby-engine && \ 
     apt-get install -y --no-install-recommends iotedge && \ 
