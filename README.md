@@ -58,17 +58,16 @@ docker -H 192.168.2.96 run --privileged -d --env-file .env --name iotedgec arlot
 ## iotedge cli
 To access the iotedge CLI, open a bash: 
 ```
-docker -H <docker-host> exec -it iotedgec bash
+docker -H <docker-host> exec -it iotedgec bash and use the CLI as you would normally do.
 ```
 where:
 * `<docker-host>` is the docker host where the 'iotedgec' container is running (ex. 127.0.0.1 or any other)
-and use the CLI as you would normally do.
 
 example:
 ```
 docker -H 192.168.2.96 exec -it iotedgec bash
 ```
-and then for instance:
+and then, to list the iot edge modules:
 ```
 iotedge list
 ```
